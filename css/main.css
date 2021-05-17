@@ -7,9 +7,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1120px;
+  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
+  padding: 0 40px;
 }
 .logo a {
   font-size: 1.5rem;
@@ -47,8 +48,9 @@ header {
 
 /* Hero */
 .hero-container {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 .hero-image {
   width: 100%;
@@ -68,4 +70,14 @@ header {
   position: absolute;
   top: 475px;
   right: 0;
+}
+
+@media (max-width: 1305px) {
+  .position {
+    position: unset;
+  }
+  .card-1 {
+    top: 195px;
+    right: -16px;
+  }
 }
