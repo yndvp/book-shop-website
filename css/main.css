@@ -21,7 +21,7 @@ header {
   display: flex;
 }
 .nav-links a {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--gray-color);
   padding: 10px;
@@ -72,6 +72,127 @@ header {
   right: 0;
 }
 
+/* Books section */
+.books {
+  margin-top: 180px;
+  margin-bottom: 100px;
+}
+
+.category {
+  position: absolute;
+  top: 952px;
+  left: 0;
+  width: 416px;
+  height: 710px;
+  background: #efeef6;
+}
+.category ul {
+  display: inline-block;
+  margin-left: 150px;
+  margin-top: 34px;
+}
+.category a {
+  display: inline-block;
+  color: var(--gray-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 1.5px;
+}
+.category li:first-child {
+  list-style: disc;
+}
+.category li:first-child a {
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.category a:hover {
+  list-style: disc;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.books-container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.bestsellers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 76px;
+  grid-row-gap: 96px;
+  width: 924px;
+  z-index: 10;
+}
+.bestsellers .book {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.bestsellers .book-cover img {
+  box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+}
+.bestsellers .book-info {
+  margin-left: 36px;
+}
+.bestsellers .book-info .writer {
+  color: var(--gray-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.625rem;
+  margin-bottom: 4px;
+}
+.bestsellers .book-info .title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.bestsellers .book-info .rating {
+  display: flex;
+  align-items: center;
+}
+.bestsellers .book-info .review {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.625rem;
+  padding-left: 6px;
+}
+.bestsellers .book-info .summary {
+  color: var(--gray-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.625rem;
+  margin: 16px 0;
+}
+.bestsellers .book-info .price {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+.bestsellers .book-info .price span {
+  color: #bdbdbd;
+  font-weight: 600;
+  text-decoration-line: line-through;
+  margin-left: 8px;
+}
+.bestsellers .book-info .btn {
+  display: inline-block;
+  color: var(--btn-color);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 17px 60px;
+  border: 1px solid var(--btn-color);
+  transition: 0.2s;
+}
+.bestsellers .book-info .btn:hover {
+  color: #fff;
+  background: var(--btn-color);
+  transition: 0.25s;
+}
+
+/* Responsive */
 @media (max-width: 1305px) {
   .position {
     position: unset;
