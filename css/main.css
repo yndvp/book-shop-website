@@ -2,7 +2,6 @@
 header {
   background: #ffffff;
   height: 116px;
-  z-index: 10;
 }
 .header-container {
   display: flex;
@@ -30,11 +29,9 @@ header {
 }
 .nav-links li:first-child a {
   color: var(--primary-color);
-  font-weight: 900;
 }
 .nav-links a:hover {
   color: var(--primary-color);
-  font-weight: 900;
 }
 .nav-icons ul {
   display: flex;
@@ -50,14 +47,25 @@ header {
 
 /* Hero */
 .hero-container {
-  max-width: 1238px;
+  max-width: 1120px;
   margin: 0 auto;
 }
-.hero .hero-image {
-  margin-top: -53px;
-  z-index: -10;
-}
-.hero .hero-image img {
+.hero-image {
   width: 100%;
-  z-index: -10;
+}
+.hero-image img {
+  width: 100%;
+}
+.position {
+  position: relative;
+}
+.card-1 {
+  position: absolute;
+  top: 79px;
+  right: -100px;
+}
+.card-2 {
+  position: absolute;
+  top: 475px;
+  right: 0;
 }
