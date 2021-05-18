@@ -21,7 +21,7 @@ header {
   display: flex;
 }
 .nav-links a {
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 700;
   color: var(--gray-color);
   padding: 10px;
@@ -30,9 +30,11 @@ header {
 }
 .nav-links li:first-child a {
   color: var(--primary-color);
+  font-weight: 900;
 }
 .nav-links a:hover {
   color: var(--primary-color);
+  font-weight: 900;
 }
 .nav-icons ul {
   display: flex;
@@ -61,23 +63,50 @@ header {
 .position {
   position: relative;
 }
+.card-1,
+.card-2 {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.125rem;
+  box-shadow: 0px 24px 36px rgba(53, 49, 84, 0.28);
+}
 .card-1 {
+  display: flex;
+  align-items: flex-end;
+  width: 149px;
+  height: 204px;
+  background: #9e98dc;
   position: absolute;
   top: 79px;
-  right: -100px;
+  right: -86px;
+}
+.card-1 .content {
+  padding: 20px;
 }
 .card-2 {
+  display: flex;
+  align-items: flex-end;
+  width: 137px;
+  height: 273px;
+  background: #ff8fe6;
   position: absolute;
   top: 475px;
   right: 0;
 }
+.card-2 .content {
+  padding: 20px;
+  padding-right: 48px;
+}
 
 /* Books section */
 .books {
+  /* position: relative; */
   margin-top: 180px;
   margin-bottom: 100px;
 }
 
+/* Books section - Category */
 .category {
   position: absolute;
   top: 952px;
@@ -114,10 +143,13 @@ header {
   font-weight: 700;
 }
 
+/* Books section - Bestsellers */
 .books-container {
+  position: relative;
   display: flex;
   justify-content: flex-end;
-  max-width: 1120px;
+  max-width: 1200px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 .bestsellers {
@@ -129,8 +161,7 @@ header {
   z-index: 10;
 }
 .bestsellers .book {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
 }
 .bestsellers .book-cover img {
@@ -139,6 +170,13 @@ header {
 .bestsellers .book-info {
   margin-left: 36px;
 }
+.bestsellers .book-info a {
+  color: var(--gray-color);
+}
+.bestsellers .book-info a:hover {
+  text-decoration: underline;
+}
+
 .bestsellers .book-info .writer {
   color: var(--gray-color);
   font-family: "Open Sans", sans-serif;
@@ -149,6 +187,10 @@ header {
   font-weight: 700;
   margin-bottom: 4px;
 }
+.bestsellers .book-info .title a {
+  color: var(--primary-color);
+}
+
 .bestsellers .book-info .rating {
   display: flex;
   align-items: center;
@@ -160,7 +202,6 @@ header {
   padding-left: 6px;
 }
 .bestsellers .book-info .summary {
-  color: var(--gray-color);
   font-family: "Open Sans", sans-serif;
   font-size: 0.625rem;
   margin: 16px 0;
@@ -190,15 +231,66 @@ header {
   color: #fff;
   background: var(--btn-color);
   transition: 0.25s;
+  text-decoration: none;
 }
 
 /* Responsive */
+@media (max-width: 1380px) {
+  .bestsellers {
+    grid-template-columns: 1fr;
+    width: unset;
+    grid-column: 2;
+  }
+  .books-container {
+    display: grid;
+    grid-template-columns: 448px 1fr;
+  }
+  .book-cover {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 @media (max-width: 1305px) {
   .position {
     position: unset;
   }
   .card-1 {
     top: 195px;
-    right: -16px;
+    right: 0;
+  }
+}
+@media (max-width: 1216px) {
+  .card-1 {
+    top: 130px;
+    z-index: 3;
+    box-shadow: 0px 3px 18px rgba(53, 49, 84, 0.28);
+  }
+  .card-2 {
+    top: 260px;
+    z-index: 2;
+  }
+}
+@media (max-width: 943px) {
+}
+@media (max-width: 810px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .card-1,
+  .card-2 {
+    width: unset;
+    height: unset;
+    position: unset;
+  }
+  .card-1 {
+    margin-top: -4px;
+  }
+
+  .category {
+    width: 200px;
+  }
+  .category ul {
+    margin-left: 50px;
   }
 }
