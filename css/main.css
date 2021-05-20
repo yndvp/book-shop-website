@@ -98,10 +98,14 @@ header {
   padding: 20px;
   padding-right: 48px;
 }
+.card-1:hover,
+.card-2:hover {
+  transform: translateY(-8px);
+}
 
 /* Books section */
 .books {
-  /* position: relative; */
+  position: relative;
   margin-top: 180px;
   margin-bottom: 100px;
 }
@@ -109,7 +113,7 @@ header {
 /* Books section - Category */
 .category {
   position: absolute;
-  top: 952px;
+  top: -46px;
   left: 0;
   width: 416px;
   height: 710px;
@@ -145,7 +149,6 @@ header {
 
 /* Books section - Bestsellers */
 .books-container {
-  position: relative;
   display: flex;
   justify-content: flex-end;
   max-width: 1200px;
@@ -234,6 +237,15 @@ header {
   text-decoration: none;
 }
 
+/* Navbar Toggle */
+.toggleBtn {
+  display: none;
+}
+.nav-links.show,
+.nav-icons.show {
+  display: flex;
+}
+
 /* Responsive */
 @media (max-width: 1380px) {
   .bestsellers {
@@ -258,6 +270,10 @@ header {
     top: 195px;
     right: 0;
   }
+  .card-1:hover,
+  .card-2:hover {
+    transform: translateX(8px);
+  }
 }
 @media (max-width: 1216px) {
   .card-1 {
@@ -271,8 +287,72 @@ header {
   }
 }
 @media (max-width: 943px) {
+  .category {
+    max-width: 1200px;
+    padding: 20px 40px;
+    width: unset;
+    height: unset;
+  }
+  .category ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: unset;
+  }
+  .bestsellers {
+    margin-top: 200px;
+  }
+  .books-container {
+    display: grid;
+    grid-template-columns: unset;
+    justify-content: center;
+  }
 }
 @media (max-width: 810px) {
+  /* Header */
+  .toggleBtn {
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    font-size: 24px;
+    color: var(--primary-color);
+  }
+  .nav-links,
+  .nav-icons {
+    display: none;
+  }
+  header {
+    height: unset;
+  }
+  .header-container {
+    flex-direction: column;
+  }
+  .header-container .logo {
+    align-self: flex-start;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    margin-bottom: 12px;
+  }
+  .nav-links a,
+  .nav-icons a {
+    display: inline-block;
+    padding: 8px;
+    margin: 8px;
+  }
+  .nav-icons li:last-child a {
+    padding-right: 8px;
+    margin-right: 8px;
+  }
+
+  /* Hero */
   .hero-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -286,11 +366,18 @@ header {
   .card-1 {
     margin-top: -4px;
   }
-
-  .category {
-    width: 200px;
+  .card-1:hover,
+  .card-2:hover {
+    transform: scale(1.03);
   }
-  .category ul {
-    margin-left: 50px;
+}
+@media (max-width: 756px) {
+  .bestsellers {
+    margin-top: 240px;
+  }
+}
+@media (max-width: 603px) {
+  .bestsellers {
+    margin-top: 280px;
   }
 }
