@@ -381,3 +381,34 @@ header {
     margin-top: 280px;
   }
 }
+@media (max-width: 467px) {
+  .bestsellers {
+    margin-top: 320px;
+  }
+}
+@media (max-width: 454px) {
+  .bestsellers {
+    margin-top: 360px;
+  }
+}
+@media (max-width: 413px) {
+  .bestsellers {
+    margin-top: 400px;
+  }
+  .bestsellers .book-cover img {
+    width: 130px;
+  }
+}
+@media (max-width: 359px) {
+  .bestsellers {
+    margin-top: 440px;
+  }
+  .bestsellers .book-info {
+    margin-left: 18px;
+  }
+}
+@media (max-width: 327px) {
+  .bestsellers {
+    margin-top: 480px;
+  }
+}
