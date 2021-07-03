@@ -237,6 +237,44 @@ header {
   text-decoration: none;
 }
 
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--gray-background);
+  padding: 40px 0;
+}
+footer .info-container {
+  display: flex;
+  align-items: center;
+}
+footer .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-right: 50px;
+}
+footer nav {
+  padding: 0 30px;
+}
+footer nav a {
+  color: var(--gray-color);
+  font-size: 12px;
+}
+footer nav li {
+  margin: 10px 0;
+}
+footer .social ul {
+  display: flex;
+}
+footer .social ul li {
+  padding: 0 10px;
+}
+footer .social ul li a {
+  font-size: 20px;
+}
+
 /* Navbar Toggle */
 .toggleBtn {
   display: none;
