@@ -379,6 +379,9 @@ footer .social ul li a {
     padding-left: 0;
     padding-right: 60px;
   }
+  footer .info:last-child {
+    padding: 0;
+  }
   footer .social li:first-child {
     padding-left: 0;
   }
