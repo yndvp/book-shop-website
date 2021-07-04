@@ -451,10 +451,12 @@ footer .social ul li a {
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 415px) {
+  /* Toggle button */
   .toggleBtn {
     right: 20px;
   }
+  /* Bestsellers */
   .bestsellers .book {
     flex-direction: column;
   }
@@ -464,5 +466,13 @@ footer .social ul li a {
   }
   .bestsellers .book .book-info .rating {
     display: inline-block;
+  }
+  /* Footer */
+  footer .info-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer .info-container .info {
+    padding: 0;
   }
 }
