@@ -1,16 +1,40 @@
+:root {
+  --primary-color: #1c2a39;
+  --gray-color: #5c6a79;
+  --btn-color: #4c3db2;
+  --gray-background: #efeef6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Header */
 header {
   background: #ffffff;
   height: 116px;
 }
-.header-container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   height: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
+  position: relative;
 }
 .logo a {
   font-size: 1.5rem;
@@ -49,11 +73,6 @@ header {
 }
 
 /* Hero */
-.hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
 .hero-image {
   width: 100%;
 }
@@ -148,12 +167,9 @@ header {
 }
 
 /* Books section - Bestsellers */
-.books-container {
+.books .container {
   display: flex;
   justify-content: flex-end;
-  max-width: 1200px;
-  padding: 0 40px;
-  margin: 0 auto;
 }
 .bestsellers {
   display: grid;
@@ -233,21 +249,19 @@ header {
 .bestsellers .book-info .btn:hover {
   color: #fff;
   background: var(--btn-color);
-  transition: 0.25s;
+  transition: 0.4s;
   text-decoration: none;
 }
 
 /* Footer */
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   background: var(--gray-background);
   padding: 40px 0;
 }
-footer .info-container {
+footer .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 footer .logo {
   font-size: 1.5rem;
@@ -255,8 +269,12 @@ footer .logo {
   color: var(--primary-color);
   padding-right: 50px;
 }
-footer nav {
-  padding: 0 30px;
+footer .info-container {
+  display: flex;
+  align-items: center;
+}
+footer .info {
+  padding: 0 50px;
 }
 footer nav a {
   color: var(--gray-color);
@@ -291,7 +309,7 @@ footer .social ul li a {
     width: unset;
     grid-column: 2;
   }
-  .books-container {
+  .books .container {
     display: grid;
     grid-template-columns: 448px 1fr;
   }
@@ -325,9 +343,15 @@ footer .social ul li a {
   }
 }
 @media (max-width: 943px) {
+  /* Books section */
+  .books {
+    margin-top: 140px;
+  }
   .category {
+    position: unset;
     max-width: 1200px;
     padding: 20px 40px;
+    margin-bottom: 90px;
     width: unset;
     height: unset;
   }
@@ -337,13 +361,26 @@ footer .social ul li a {
     justify-content: center;
     margin: unset;
   }
-  .bestsellers {
-    margin-top: 200px;
-  }
-  .books-container {
+  .books .container {
     display: grid;
     grid-template-columns: unset;
     justify-content: center;
+  }
+
+  /* Footer */
+  footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .container > * {
+    margin: 10px 0;
+  }
+  footer .info {
+    padding-left: 0;
+    padding-right: 60px;
+  }
+  footer .social li:first-child {
+    padding-left: 0;
   }
 }
 @media (max-width: 810px) {
@@ -363,10 +400,10 @@ footer .social ul li a {
   header {
     height: unset;
   }
-  .header-container {
+  header .container {
     flex-direction: column;
   }
-  .header-container .logo {
+  header .container .logo {
     align-self: flex-start;
     height: 80px;
     display: flex;
@@ -391,7 +428,7 @@ footer .social ul li a {
   }
 
   /* Hero */
-  .hero-container {
+  .hero .container {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -409,44 +446,9 @@ footer .social ul li a {
     transform: scale(1.03);
   }
 }
-@media (max-width: 756px) {
-  .bestsellers {
-    margin-top: 235px;
-  }
-}
-@media (max-width: 603px) {
-  .bestsellers {
-    margin-top: 270px;
-  }
-}
-@media (max-width: 467px) {
-  .bestsellers {
-    margin-top: 305px;
-  }
-}
-@media (max-width: 454px) {
-  .bestsellers {
-    margin-top: 340px;
-  }
-}
-@media (max-width: 413px) {
-  .bestsellers {
-    margin-top: 375px;
-  }
-  .bestsellers .book-cover img {
-    width: 130px;
-  }
-}
-@media (max-width: 359px) {
-  .bestsellers {
-    margin-top: 410px;
-  }
-  .bestsellers .book-info {
-    margin-left: 18px;
-  }
-}
-@media (max-width: 327px) {
-  .bestsellers {
-    margin-top: 470px;
+
+@media (max-width: 412px) {
+  .bestsellers .book {
+    flex-direction: column;
   }
 }

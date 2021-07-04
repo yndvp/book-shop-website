@@ -1,25 +1,5 @@
-:root {
-  --primary-color: #1c2a39;
-  --gray-color: #5c6a79;
-  --btn-color: #4c3db2;
-  --gray-background: #efeef6;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  color: var(--primary-color);
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
