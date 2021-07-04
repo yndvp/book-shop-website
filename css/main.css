@@ -459,6 +459,7 @@ footer .social ul li a {
   }
   .bestsellers .book .book-info {
     text-align: center;
+    margin-left: 0;
   }
   .bestsellers .book .book-info .rating {
     display: inline-block;
