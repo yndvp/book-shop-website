@@ -451,7 +451,16 @@ footer .social ul li a {
 }
 
 @media (max-width: 412px) {
+  .toggleBtn {
+    right: 20px;
+  }
   .bestsellers .book {
     flex-direction: column;
+  }
+  .bestsellers .book .book-info {
+    text-align: center;
+  }
+  .bestsellers .book .book-info .rating {
+    display: inline-block;
   }
 }
