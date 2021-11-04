@@ -9,4 +9,4 @@ E-commerce book shop website that includes responsive design
 - JavaScript ES6+
 
 ## Screenshot
-![](images/bookshop-delete.png)
+![](screencapture-book-shop-website.png)
